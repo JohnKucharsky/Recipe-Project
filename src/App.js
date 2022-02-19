@@ -9,8 +9,8 @@ function App() {
   const [recipes, setRecipes] = useState("");
 
   const client = createClient({
-    space: "ce9ul5aows38",
-    accessToken: "QSWfTFWae4XyG8HC_Alqp2FjF-6GaaL9rBvL97l2xs4",
+    space: process.env.REACT_APP_API_SPACE,
+    accessToken: process.env.REACT_APP_API_KEY,
   });
   useEffect(() => {
     async function getRecipes() {
